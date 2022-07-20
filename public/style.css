@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --lavend-blue: #E6E6FA;
+    --light-blue: #afeeee;
+    --pale-red: #DB7093;
+    --green-blue: #20B2AA;
+    --dark-blue: #000033;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--lavend-blue);
+    font-size: 20px;
+    background-image: linear-gradient(200deg, #000033 15%, #20B2AA 90%);
+    cursor: default;
+
+}
+
+h1 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+h2 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.input-type-task {
+    width: 50vw;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: var(--light-blue);
+}
+
+::placeholder {
+    color: var(--dark-blue);
+}
+
+:placeholder-shown {
+    color: var(--dark-blue);
+}
+
+:focus {
+    color: var(--dark-blue);
+    border: none;
+}
+
+.div-tasks-list {
+    padding: 50px;
+    border: 3px solid var(--light-blue);
+    border-top: none;
+    background-color: var(--dark-blue);
+}
+
+.list,
+.done-tasks-list {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.list {
+    opacity: 1;
+    transition: opacity 500ms linear;
+}
+
+.list.isLoading {
+    opacity: 0;
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.done-tasks-list li {
+    color: var(--green-blue);
+}
+
+.fa-solid {
+    font-size: 40px;
+}
+
+.fa-circle-check {
+    color: var(--green-blue);
+    font-size: 20px;
+}
+
+.fa-circle-xmark {
+    color: var(--pale-red);
+    font-size: 20px;
+}
+
+.fa-circle-plus {
+    color: var(--dark-blue);
+}
+
+
+i {
+    /*transition: color 0.8s;*/
+    cursor: pointer;
+}
+
+.buttons {
+    margin-left: 10px;
+}
+
+
+label {
+    display: flex;
+    border: 3px solid var(--light-blue);
+    background-color: var(--light-blue);
+
+}
+
+.btn-add-task {
+    background-color: transparent;
+    border: none;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.btn-done-task,
+.btn-remove-task {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-done-task {
+    margin-right: 10px;
+}
+
+.done {
+    color: var(--green-blue);
+}
+
+
+
+
+
+
